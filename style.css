@@ -1,82 +1,160 @@
-body {
-  font-family: Arial, sans-serif;
+/* ===== RESET BÁSICO ===== */
+* {
   margin: 0;
-  background: #f4f6f8;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-.topo {
-  background: linear-gradient(90deg, #111, #333);
-  color: white;
+/* ===== FUNDO GERAL ===== */
+body {
+  background: #0f172a; /* azul escuro moderno */
+  color: #e5e7eb;
+}
+
+/* ===== TOPO ===== */
+header, .topo {
+  background: linear-gradient(135deg, #111827, #1f2937);
+  padding: 30px 20px;
   text-align: center;
-  padding: 25px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
+header h1, .topo h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+header p, .topo p {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* ===== BARRA DE BUSCA ===== */
 .topo input {
-  margin-top: 10px;
-  padding: 10px;
-  width: 80%;
-  max-width: 400px;
-  border-radius: 8px;
+  margin-top: 15px;
+  padding: 12px 15px;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 10px;
   border: none;
+  outline: none;
+  background: #1f2937;
+  color: white;
+  font-size: 14px;
 }
 
+.topo input::placeholder {
+  color: #9ca3af;
+}
+
+/* ===== MENU ===== */
 nav {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  background: #222;
-  padding: 10px;
+  gap: 25px;
+  padding: 12px;
+  background: #111827;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 nav a {
-  color: white;
+  color: #e5e7eb;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.2s;
 }
 
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* ===== GRID DE PRODUTOS ===== */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 25px;
+  max-width: 1100px;
+  margin: auto;
 }
 
+/* ===== CARD PRODUTO ===== */
 .produto {
-  background: white;
-  border-radius: 12px;
+  background: #1f2937;
+  border-radius: 14px;
+  overflow: hidden;
   padding: 15px;
-  text-align: center;
   position: relative;
-  transition: 0.3s;
+  transition: 0.25s;
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
 .produto:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
+/* ===== IMAGEM ===== */
 .produto img {
   width: 100%;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
+/* ===== TITULO ===== */
+.produto h2 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+/* ===== DESCRIÇÃO ===== */
+.produto p {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+/* ===== BOTÃO ===== */
 .produto a {
-  display: inline-block;
-  margin-top: 10px;
+  display: block;
+  text-align: center;
   padding: 10px;
-  background: #28a745;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
   color: white;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.2s;
 }
 
+.produto a:hover {
+  filter: brightness(1.1);
+}
+
+/* ===== TAG (OFERTA / TOP) ===== */
 .tag {
   position: absolute;
   top: 10px;
   left: 10px;
-  background: red;
+  background: #ef4444;
   color: white;
-  font-size: 12px;
+  font-size: 11px;
   padding: 5px 8px;
   border-radius: 6px;
+  font-weight: bold;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  .grid {
+    padding: 15px;
+    gap: 15px;
+  }
 }
