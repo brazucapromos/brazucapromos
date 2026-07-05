@@ -1,90 +1,122 @@
 :root {
-    --bg-color: #000000;
-    --card-bg: #121212;
-    --text-primary: #ffffff;
-    --text-secondary: #aaaaaa;
-    --accent-color: #3399ff;
-    --border-radius: 8px;
+  --bg-color: #000000;
+  --card-bg: #121212;
+  --text-active: #3399ff;
+  --text-primary: #ffffff;
+  --text-secondary: #aaaaaa;
 }
 
 body {
-    background-color: var(--bg-color) !important;
-    color: var(--text-primary);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
+  background-color: var(--bg-color) !important;
+  color: var(--text-primary);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+header {
+  background-color: var(--card-bg);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222;
+}
+
+.menu-icon, .cart-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text-primary);
 }
 
 .promocoes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .promocao-item {
-    background: var(--card-bg);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #222;
+  background: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid #222;
+  transition: transform 0.3s ease;
 }
 
 .promocao-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(51, 153, 255, 0.2);
+  transform: translateY(-5px);
 }
 
 .promocao-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
 }
 
 .promocao-info {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .promocao-titulo {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: var(--text-primary);
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
 .promocao-preco {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: var(--accent-color);
-    margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--text-active);
+  margin-bottom: 10px;
 }
 
 .promocao-link {
-    margin-top: auto;
-    padding: 12px;
-    background: var(--accent-color);
-    color: #000;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: background 0.3s ease;
+  margin-top: auto;
+  padding: 10px;
+  background-color: var(--text-active);
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
 }
 
-.promocao-link:hover {
-    background: #0073e6;
-    color: #fff;
+footer {
+  background-color: var(--card-bg);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #222;
+}
+
+.footer-item {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.footer-item.active {
+  color: var(--text-active);
 }
