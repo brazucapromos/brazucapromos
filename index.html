@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Meta Tags -->
+    <title>Promoções Imperdíveis | As Melhores Ofertas da Shopee</title>
+    <meta name="description" content="Encontre as melhores promoções, cupons e achadinhos da Shopee. Produtos selecionados diariamente com super descontos e frete grátis!">
+    <meta name="keywords" content="shopee, promoções, achadinhos, cupons, descontos, ofertas, afiliado shopee">
+    
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seu-usuario.github.io/seu-repositorio/">
+    <meta property="og:title" content="Promoções Imperdíveis | As Melhores Ofertas da Shopee">
+    <meta property="og:description" content="Produtos selecionados diariamente com super descontos. Entre no nosso grupo e economize!">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=600&auto=format&fit=crop">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO FIXO -->
+    <header class="main-header" id="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="logo-icon"><path d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1zm-9-1a2 2 0 0 1 4 0v1h-4V6zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h12v10z"/></svg>
+                <span>Promoções <span class="highlight">Imperdíveis</span></span>
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Abrir Menu" id="menuToggle">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <!-- SUBSTITUA OS LINKS ABAIXO SEGUNDO AS INSTRUÇÕES -->
+                <a href="#colecao" class="nav-btn btn-secondary-outline">Minha Coleção Shopee</a>
+                <a href="https://t.me/SEU_CANAL" target="_blank" rel="noopener" class="nav-btn btn-telegram">Telegram</a>
+                <a href="https://tiktok.com/@SEU_PERFIL" target="_blank" rel="noopener" class="nav-btn btn-social-icon" title="TikTok">TikTok</a>
+                <a href="https://instagram.com/SEU_PERFIL" target="_blank" rel="noopener" class="nav-btn btn-social-icon" title="Instagram">Instagram</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- SEÇÃO HERO / BANNER -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="badge">🔥 Atualizado Hoje</span>
+                    <h1>As Melhores Promoções da Shopee Todos os Dias</h1>
+                    <p>Produtos selecionados a dedo com ofertas reais, cupons exclusivos e o menor preço garantido.</p>
+                    <div class="hero-buttons">
+                        <a href="#promocoes" class="btn btn-primary btn-lg">🛒 Ver Promoções</a>
+                        <!-- SUBSTITUA O LINK DO TELEGRAM ABAIXO -->
+                        <a href="https://t.me/SEU_CANAL" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">📲 Entrar no Telegram</a>
+                    </div>
+                </div>
+                <div class="hero-graphics">
+                    <div class="floating-card card-1">🛍️ Até 70% OFF</div>
+                    <div class="floating-card card-2">🚚 Frete Grátis</div>
+                    <div class="hero-circle"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BARRA DE PESQUISA -->
+        <section class="search-section">
+            <div class="search-container">
+                <div class="search-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="search-icon"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>
+                    <input type="text" id="searchInput" placeholder="Procure por produtos, marcas ou categorias...">
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORIAS -->
+        <section class="categories-section">
+            <div class="section-container">
+                <h2 class="section-title">Navegue por Categorias</h2>
+                <div class="categories-grid">
+                    <div class="category-card" data-category="celulares"><span class="cat-icon">📱</span><span>Celulares</span></div>
+                    <div class="category-card" data-category="informatica"><span class="cat-icon">💻</span><span>Informática</span></div>
+                    <div class="category-card" data-category="games"><span class="cat-icon">🎮</span><span>Games</span></div>
+                    <div class="category-card" data-category="casa"><span class="cat-icon">🏠</span><span>Casa</span></div>
+                    <div class="category-card" data-category="moda"><span class="cat-icon">👕</span><span>Moda</span></div>
+                    <div class="category-card" data-category="beleza"><span class="cat-icon">💄</span><span>Beleza</span></div>
+                    <div class="category-card" data-category="ferramentas"><span class="cat-icon">⚙️</span><span>Ferramentas</span></div>
+                    <div class="category-card" data-category="automoveis"><span class="cat-icon">🚗</span><span>Automóveis</span></div>
+                    <div class="category-card" data-category="pet"><span class="cat-icon">🐶</span><span>Pet</span></div>
+                    <div class="category-card" data-category="cozinha"><span class="cat-icon">🍳</span><span>Cozinha</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROMOÇÕES DO DIA -->
+        <section id="promocoes" class="products-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">⚡ Promoções do Dia</h2>
+                    <p class="section-subtitle">As ofertas mais quentes encontradas nas últimas horas.</p>
+                </div>
+                <div class="products-grid" id="promos-container">
+                    <!-- Gerado dinamicamente via JS para facilitar manutenção -->
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUTOS EM ALTA -->
+        <section class="products-section bg-light">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">📈 Produtos em Alta</h2>
+                    <p class="section-subtitle">Os itens mais comprados e desejados da semana.</p>
+                </div>
+                <div class="products-grid" id="trending-container">
+                    <!-- Gerado dinamicamente via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- MINHA COLEÇÃO -->
+        <section id="colecao" class="collection-section">
+            <div class="collection-container">
+                <h2>Centenas de Ofertas Organizadas</h2>
+                <p>Acesse nossa coleção completa e exclusiva diretamente na Shopee. Todos os produtos com estoque verificado e cupons aplicados.</p>
+                <!-- SUBSTITUA O LINK ABAIXO PELO LINK DA SUA COLEÇÃO DA SHOPEE -->
+                <a href="https://mycollection.shopee.com.br/SUA_COLECAO" target="_blank" rel="noopener" class="btn btn-primary btn-xl pulse-animation">🛒 Abrir Minha Coleção da Shopee</a>
+            </div>
+        </section>
+
+        <!-- TELEGRAM BANNER -->
+        <section class="telegram-section">
+            <div class="telegram-container">
+                <div class="telegram-content">
+                    <h2>📲 Receba Promoções em Primeira Mão</h2>
+                    <p>Algumas ofertas duram poucos minutos! Entre no nosso grupo gratuito do Telegram e seja notificado assim que o preço cair.</p>
+                    <!-- SUBSTITUA O LINK DO TELEGRAM ABAIXO -->
+                    <a href="https://t.me/SEU_CANAL" target="_blank" rel="noopener" class="btn btn-telegram-dark btn-lg">Entrar no Telegram Grátis</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section class="newsletter-section">
+            <div class="newsletter-container">
+                <h3>Newsletter de Achadinhos</h3>
+                <p>Não usa Telegram? Deixe seu e-mail e enviaremos o resumo das melhores ofertas da semana.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Digite seu melhor e-mail" required>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <div class="section-container text-center">
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <button class="faq-question">Como funcionam as promoções? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer"><p>Nossa equipe monitora a Shopee 24 horas por dia procurando quedas reais de preços e cupons cumulativos. Quando achamos um preço excelente, postamos aqui.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Os links são seguros? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer"><p>Sim, absolutamente seguros. Todos os links redirecionam você diretamente para o aplicativo ou site oficial da Shopee Brasil.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">As ofertas mudam diariamente? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer"><p>Sim! Os preços na Shopee oscilam muito. Atualizamos a lista todos os dias para garantir que você encontre sempre cupons ativos.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Comprar por aqui tem custo adicional? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer"><p>Nenhum! Você não paga nada a mais por usar nossos links. Pelo contrário, você economiza usando os cupons que garimpamos.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Promoções Imperdíveis</h3>
+                    <p>O seu portal de economia inteligente na Shopee.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#promocoes">Promoções</a></li>
+                        <li><a href="#colecao">Coleção</a></li>
+                        <li><a href="https://t.me/SEU_CANAL" target="_blank" rel="noopener">Grupo Telegram</a></li>
+                    </ul>
+                </div>
+                <div class="footer-socials">
+                    <h4>Siga-nos</h4>
+                    <div class="social-icons-footer">
+                        <!-- SUBSTITUA COM SEUS LINKS -->
+                        <a href="https://tiktok.com/@SEU_PERFIL" target="_blank" rel="noopener">TikTok</a>
+                        <a href="https://instagram.com/SEU_PERFIL" target="_blank" rel="noopener">Instagram</a>
+                        <a href="https://t.me/SEU_CANAL" target="_blank" rel="noopener">Telegram</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-legal">
+                <p class="affiliate-disclosure"><strong>Aviso de afiliado:</strong> Participamos do Programa de Afiliados da Shopee. Ao comprar através dos nossos links, podemos receber uma pequena comissão do marketplace, sem nenhum custo adicional para você.</p>
+                <div class="legal-links">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                </div>
+                <p class="copyright">&copy; 2026 Promoções Imperdíveis. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Source -->
+    <script src="script.js"></script>
+</body>
+</html>
