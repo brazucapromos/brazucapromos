@@ -1,45 +1,54 @@
-<body>
+document.addEventListener("DOMContentLoaded", () => {
 
-  <header class="topo">
-    <h1>🔥 Ofertas Imperdíveis</h1>
-    <p>Os melhores descontos da internet hoje</p>
+  /* ==============================
+     🔎 BUSCA INTELIGENTE
+  ============================== */
+  const input = document.getElementById("busca");
+  const produtos = document.querySelectorAll(".produto");
 
-    <input type="text" id="busca" placeholder="Buscar produto...">
-  </header>
+  if (input) {
+    input.addEventListener("input", () => {
+      let valor = input.value.toLowerCase().trim();
 
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="produtos.html">Produtos</a>
-  </nav>
+      produtos.forEach(produto => {
+        let nome = produto.getAttribute("data-nome")?.toLowerCase() || "";
+        let titulo = produto.querySelector("h2")?.innerText.toLowerCase() || "";
 
-  <main class="grid">
+        if (nome.includes(valor) || titulo.includes(valor)) {
+          produto.style.display = "block";
+        } else {
+          produto.style.display = "none";
+        }
+      });
+    });
+  }
 
-    <div class="produto" data-nome="fone bluetooth">
-      <span class="tag">OFERTA</span>
-      <img src="img/produto1.jpg">
-      <h2>Fone Bluetooth</h2>
-      <p>Som potente + bateria longa duração</p>
-      <a href="SEU-LINK-AFILIADO" target="_blank">Comprar</a>
-    </div>
+  /* ==============================
+     ⭐ ANIMAÇÃO DE ENTRADA
+  ============================== */
+  produtos.forEach((produto, index) => {
+    produto.style.opacity = "0";
+    produto.style.transform = "translateY(20px)";
 
-    <div class="produto" data-nome="relógio smart">
-      <span class="tag">TOP</span>
-      <img src="img/produto2.jpg">
-      <h2>Relógio Smart</h2>
-      <p>Monitore saúde e notificações</p>
-      <a href="SEU-LINK-AFILIADO" target="_blank">Comprar</a>
-    </div>
+    setTimeout(() => {
+      produto.style.transition = "0.5s ease";
+      produto.style.opacity = "1";
+      produto.style.transform = "translateY(0)";
+    }, index * 100);
+  });
 
-    <div class="produto" data-nome="caixa de som">
-      <span class="tag">PROMO</span>
-      <img src="img/produto3.jpg">
-      <h2>Caixa de Som</h2>
-      <p>Som alto e grave potente</p>
-      <a href="SEU-LINK-AFILIADO" target="_blank">Comprar</a>
-    </div>
+  /* ==============================
+     🛒 FEEDBACK NO CLIQUE DO BOTÃO
+  ============================== */
+  const botoes = document.querySelectorAll(".produto a");
 
-  </main>
+  botoes.forEach(botao => {
+    botao.addEventListener("click", () => {
+      botao.innerText = "Redirecionando...";
+      setTimeout(() => {
+        botao.innerText = "Comprar";
+      }, 1500);
+    });
+  });
 
-  <script src="script.js"></script>
-
-</body>
+});
